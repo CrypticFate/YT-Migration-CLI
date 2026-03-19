@@ -1,0 +1,26 @@
+{
+  "name": "yt-migration-pipeline",
+  "version": "1.0.0",
+  "description": "YouTube account migration tool — subscriptions, likes, and playlists",
+  "type": "module",
+  "scripts": {
+    "auth:source": "tsx src/auth.ts source",
+    "auth:target": "tsx src/auth.ts target",
+    "migrate": "tsx src/migrate.ts --all",
+    "migrate:subs": "tsx src/migrate.ts --subscriptions",
+    "migrate:likes": "tsx src/migrate.ts --likes",
+    "migrate:playlists": "tsx src/migrate.ts --playlists",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.8.1",
+    "dotenv": "^16.4.7",
+    "googleapis": "^144.0.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/node": "^22.13.10",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3"
+  }
+}
